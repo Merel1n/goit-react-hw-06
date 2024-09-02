@@ -6,7 +6,7 @@ import { useMemo } from "react";
 
 const ContactList = () => {
   const contacts = useSelector((state) => state.contacts.items);
-  const filterValue = useSelector((state) => state.filter.filterValue);
+  const filterValue = useSelector((state) => state.filter.name);
   const dispatch = useDispatch();
   const onDeleteContact = (profileId) => {
     dispatch(deleteContact(profileId));
